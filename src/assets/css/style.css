@@ -1,0 +1,36 @@
+.custom-nav-bg{
+    background-color: white !important;
+}
+
+.nav-logo{
+    max-height: 30px;
+}
+
+nav.navbar{
+    height: 5rem;
+}
+
+.navbar-brand{
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 600;
+}
+
+li.nav-item a{
+    text-transform: uppercase;
+    color: black;
+}
+
+
+
+@media screen and (max-width: 767px){
+    div#navbarCollapse{
+        width: 100%;
+        position: fixed;
+        top: 75px;
+        left: 0;
+        padding-left: 20px;
+        padding-bottom: 5px;
+        background-color: white;
+    }
+}
