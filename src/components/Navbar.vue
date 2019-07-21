@@ -2,25 +2,44 @@
 
 <header>
       <nav class="navbar navbar-expand-md custom-nav-bg navbar-light border-bottom shadow-sm">
-        <a class="my-0 mr-md-auto navbar-brand text-dark" href="#">
-       <img class="nav-logo" alt="Vue logo" src="../assets/logo.png"/> Task Manager
-         </a> 
+        <router-link to="/" class="navbar-brand">
+          <img class="nav-logo" alt="Vue logo" src="../assets/logo.png"/> Task Manager
+        </router-link>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#">Home</a>
+              <router-link to="/" data-toggle="collapse" data-target=".navbar-collapse" class="nav-link" exact>
+                Home
+              </router-link>           
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Tasks</a>
+              <router-link to="/tasks" data-toggle="collapse" data-target=".navbar-collapse" class="nav-link">
+                Tasks
+              </router-link>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Register</a>
+              <router-link to="/register" data-toggle="collapse" data-target=".navbar-collapse" class="nav-link">
+                Register
+              </router-link>
             </li>           
-            <li>
-            <a class="btn btn-outline-primary" href="#">Sign in</a>
+            <li class="nav-item">
+              <router-link to="/login" data-toggle="collapse" data-target=".navbar-collapse" class="nav-link" >
+                Sign in
+              </router-link>
+            </li>
+            <li class="nav-item">
+              <a href="#" data-toggle="collapse" data-target=".navbar-collapse" class="nav-link" >
+                Logout
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" data-toggle="collapse" data-target=".navbar-collapse" class="nav-link" >
+                {{this.$store.state.username ? 
+                this.$store.state.username : 'User'}}
+              </a>
             </li>
           </ul>
         </div>
@@ -28,3 +47,5 @@
     </header>
 
 </template>
+
+
