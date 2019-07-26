@@ -7,7 +7,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     isLoggedIn: false,
-    apiUrl: 'http://localhost:3000',
+    apiUrl: 'http://localhost:3000/api',
     username: null,
     userId: null
   },
@@ -20,6 +20,7 @@ export default new Vuex.Store({
       } else {
         state.username = null;
         state.userId = null;
+        
       }
     }
   },

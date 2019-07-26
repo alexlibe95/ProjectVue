@@ -1,11 +1,13 @@
 import express from 'express';
 import { registerRoutes } from './routes';
-import {setEnvironment} from './config/env';
+import { setEnvironment } from './config/env';
+import { connectToDB } from './config/db';
 
 const app = express()
 const port = 3000
 
 setEnvironment(app);
+connectToDB();
 registerRoutes(app);
 
 console.log(process.env.NODE_ENV + "gamietesssss")

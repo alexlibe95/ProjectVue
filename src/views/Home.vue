@@ -17,10 +17,10 @@ export default {
   },
   beforeCreate: function(){
     
-    fetch(this.$store.state.apiUrl + '/api/user',{
+    fetch(this.$store.state.apiUrl + '/user',{
       method: 'GET'
     })
-    .then(res => res.json())
+    //.then(res => res.json())
     .then(res => console.log(res));
   }
 }

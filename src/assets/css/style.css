@@ -97,4 +97,13 @@ form.custom-form {
 
 .btn-secondary{
    width: 100%;
+}   
+
+.modal-title,
+.modal-body{
+    color: #1a0000 !important;
+}
+
+.isLate{
+    color: #dc3545;
 }
